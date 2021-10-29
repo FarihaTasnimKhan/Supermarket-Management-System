@@ -16,5 +16,17 @@ namespace Supermarket_Management_System
         {
             InitializeComponent();
         }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Admin Admin = new Admin();
+            Admin.Show();
+            this.Hide();
+        }
     }
 }
