@@ -24,9 +24,36 @@ namespace Supermarket_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Admin Admin = new Admin();
-            Admin.Show();
-            this.Hide();
+            if (textBox1.Text == "Fariha Khan" && textBox2.Text == "123456")
+            {
+                Admin admin= new Admin();
+                admin.Show();
+                this.Hide();
+            }
+            else if (textBox1.Text == "fk" && textBox2.Text == "123456")
+            {
+                Manager manager = new Manager();
+                manager.Show();
+                this.Hide();
+            }
+            else if (textBox1.Text == "Fariha Khan" && textBox2.Text == "123456")
+            {
+               
+            }
+            else if (textBox1.Text == "")
+            {
+                MessageBox.Show("ERROR!\n Name Is Empty");
+
+            }
+            else if (textBox2.Text == "")
+            {
+                MessageBox.Show("ERROR!\n Password Is Empty");
+
+            }
+            else
+            {
+                MessageBox.Show("Error! Invalid Name or Password.\nTry Again!!");
+            }
         }
     }
 }

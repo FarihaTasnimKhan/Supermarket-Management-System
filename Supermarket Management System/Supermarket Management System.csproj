@@ -54,6 +54,12 @@
       <DependentUpon>AccountSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="AddEmployee.cs" />
+    <Compile Include="AddStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStock.Designer.cs">
+      <DependentUpon>AddStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,8 +78,38 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager.Designer.cs">
+      <DependentUpon>Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerStockView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerStockView.Designer.cs">
+      <DependentUpon>ManagerStockView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_Employee.Designer.cs">
+      <DependentUpon>Manager_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageStock.Designer.cs">
+      <DependentUpon>ManageStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock.Designer.cs">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AccountSettings.resx">
       <DependentUpon>AccountSettings.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,6 +122,18 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Manager.resx">
+      <DependentUpon>Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerStockView.resx">
+      <DependentUpon>ManagerStockView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager_Employee.resx">
+      <DependentUpon>Manager_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageStock.resx">
+      <DependentUpon>ManageStock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -96,6 +144,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Stock.resx">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -144,6 +195,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Texture-wallpaper-HD-pictures-images1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock3.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock4.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock5.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock6.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock7.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-10-27 at 1.25.31 PM5.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

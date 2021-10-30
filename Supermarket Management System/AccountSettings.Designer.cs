@@ -129,6 +129,7 @@
             this.update.TabIndex = 9;
             this.update.Text = "CONFIRM UPDATE";
             this.update.UseVisualStyleBackColor = false;
+            this.update.Click += new System.EventHandler(this.update_Click);
             // 
             // back
             // 

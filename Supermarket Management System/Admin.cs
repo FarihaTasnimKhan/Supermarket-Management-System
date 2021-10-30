@@ -61,5 +61,12 @@ namespace Supermarket_Management_System
             this.Hide();
 
         }
+
+        private void stock_Click(object sender, EventArgs e)
+        {
+           Stock stock = new Stock();
+            stock.Show();
+            this.Hide();
+        }
     }
 }

@@ -93,6 +93,86 @@ namespace Supermarket_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap stock {
+            get {
+                object obj = ResourceManager.GetObject("stock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stock1 {
+            get {
+                object obj = ResourceManager.GetObject("stock1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stock2 {
+            get {
+                object obj = ResourceManager.GetObject("stock2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stock3 {
+            get {
+                object obj = ResourceManager.GetObject("stock3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stock4 {
+            get {
+                object obj = ResourceManager.GetObject("stock4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stock5 {
+            get {
+                object obj = ResourceManager.GetObject("stock5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stock6 {
+            get {
+                object obj = ResourceManager.GetObject("stock6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stock7 {
+            get {
+                object obj = ResourceManager.GetObject("stock7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Texture_wallpaper_HD_pictures_images {
             get {
                 object obj = ResourceManager.GetObject("Texture-wallpaper-HD-pictures-images", resourceCulture);
@@ -176,6 +256,16 @@ namespace Supermarket_Management_System.Properties {
         internal static System.Drawing.Bitmap WhatsApp_Image_2021_10_27_at_1_254 {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2021-10-27 at 1.254", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2021_10_27_at_1_255 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2021-10-27 at 1.255", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
