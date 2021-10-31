@@ -203,8 +203,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label ProfileName;
         private System.Windows.Forms.TextBox name;
@@ -216,5 +214,6 @@
         private System.Windows.Forms.Button back;
         private System.Windows.Forms.Button update;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

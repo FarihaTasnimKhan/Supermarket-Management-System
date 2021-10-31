@@ -55,6 +55,7 @@
             this.addstock.TabIndex = 6;
             this.addstock.Text = "ADD STOCK";
             this.addstock.UseVisualStyleBackColor = false;
+            this.addstock.Click += new System.EventHandler(this.addstock_Click);
             // 
             // back
             // 

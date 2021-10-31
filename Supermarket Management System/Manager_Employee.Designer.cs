@@ -281,7 +281,6 @@
             // 
             this.position.FormattingEnabled = true;
             this.position.Items.AddRange(new object[] {
-            "Manager",
             "Cashier",
             "Store Clerk"});
             this.position.Location = new System.Drawing.Point(132, 39);

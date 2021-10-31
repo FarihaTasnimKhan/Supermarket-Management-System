@@ -37,5 +37,12 @@ namespace Supermarket_Management_System
         {
             Application.Exit();
         }
+
+        private void addstock_Click(object sender, EventArgs e)
+        {
+            AddStock addstock = new AddStock();
+            addstock.Show();
+            this.Hide();
+        }
     }
 }

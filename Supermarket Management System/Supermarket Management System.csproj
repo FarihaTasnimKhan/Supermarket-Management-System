@@ -84,6 +84,12 @@
     <Compile Include="Manager.Designer.cs">
       <DependentUpon>Manager.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerAccountSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerAccountSettings.Designer.cs">
+      <DependentUpon>ManagerAccountSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerStockView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,8 +116,12 @@
     <Compile Include="Stock.Designer.cs">
       <DependentUpon>Stock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Stocks.cs" />
     <EmbeddedResource Include="AccountSettings.resx">
       <DependentUpon>AccountSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStock.resx">
+      <DependentUpon>AddStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
@@ -124,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manager.resx">
       <DependentUpon>Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerAccountSettings.resx">
+      <DependentUpon>ManagerAccountSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerStockView.resx">
       <DependentUpon>ManagerStockView.cs</DependentUpon>
@@ -219,6 +232,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WhatsApp Image 2021-10-27 at 1.25.31 PM5.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock8.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Texture-wallpaper-HD-pictures-images2.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

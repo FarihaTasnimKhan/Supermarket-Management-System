@@ -173,6 +173,16 @@ namespace Supermarket_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap stock8 {
+            get {
+                object obj = ResourceManager.GetObject("stock8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Texture_wallpaper_HD_pictures_images {
             get {
                 object obj = ResourceManager.GetObject("Texture-wallpaper-HD-pictures-images", resourceCulture);
@@ -186,6 +196,16 @@ namespace Supermarket_Management_System.Properties {
         internal static System.Drawing.Bitmap Texture_wallpaper_HD_pictures_images1 {
             get {
                 object obj = ResourceManager.GetObject("Texture-wallpaper-HD-pictures-images1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Texture_wallpaper_HD_pictures_images2 {
+            get {
+                object obj = ResourceManager.GetObject("Texture-wallpaper-HD-pictures-images2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

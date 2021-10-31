@@ -51,5 +51,7 @@ namespace Supermarket_Management_System
                 MessageBox.Show("Error");
             }
         }
+       
+        }
     }
-}
+
