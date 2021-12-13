@@ -32,13 +32,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.refresh = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Item = new System.Windows.Forms.TextBox();
             this.set = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Item = new System.Windows.Forms.TextBox();
-            this.refresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -98,6 +98,38 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // refresh
+            // 
+            this.refresh.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refresh.Location = new System.Drawing.Point(595, 414);
+            this.refresh.Name = "refresh";
+            this.refresh.Size = new System.Drawing.Size(94, 27);
+            this.refresh.TabIndex = 18;
+            this.refresh.Text = "REFRESH";
+            this.refresh.UseVisualStyleBackColor = false;
+            this.refresh.Click += new System.EventHandler(this.refresh_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label4.Location = new System.Drawing.Point(480, 129);
+            this.label4.Name = "label4";
+            this.label4.Padding = new System.Windows.Forms.Padding(5);
+            this.label4.Size = new System.Drawing.Size(92, 26);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Item Name";
+            // 
+            // Item
+            // 
+            this.Item.Location = new System.Drawing.Point(624, 128);
+            this.Item.Name = "Item";
+            this.Item.Size = new System.Drawing.Size(144, 20);
+            this.Item.TabIndex = 16;
+            // 
             // set
             // 
             this.set.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -116,12 +148,12 @@
             this.label3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(509, 182);
+            this.label3.Location = new System.Drawing.Point(480, 176);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(5);
-            this.label3.Size = new System.Drawing.Size(86, 26);
+            this.label3.Size = new System.Drawing.Size(138, 26);
             this.label3.TabIndex = 14;
-            this.label3.Text = "Price/Unit";
+            this.label3.Text = "Selling Price/Unit";
             // 
             // textBox1
             // 
@@ -142,38 +174,6 @@
             this.label2.Size = new System.Drawing.Size(187, 30);
             this.label2.TabIndex = 12;
             this.label2.Text = "SET STOCK PRICES";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(509, 128);
-            this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(5);
-            this.label4.Size = new System.Drawing.Size(92, 26);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Item Name";
-            // 
-            // Item
-            // 
-            this.Item.Location = new System.Drawing.Point(624, 128);
-            this.Item.Name = "Item";
-            this.Item.Size = new System.Drawing.Size(144, 20);
-            this.Item.TabIndex = 16;
-            // 
-            // refresh
-            // 
-            this.refresh.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refresh.Location = new System.Drawing.Point(595, 414);
-            this.refresh.Name = "refresh";
-            this.refresh.Size = new System.Drawing.Size(94, 27);
-            this.refresh.TabIndex = 18;
-            this.refresh.Text = "REFRESH";
-            this.refresh.UseVisualStyleBackColor = false;
-            this.refresh.Click += new System.EventHandler(this.refresh_Click);
             // 
             // ManagerStockView
             // 

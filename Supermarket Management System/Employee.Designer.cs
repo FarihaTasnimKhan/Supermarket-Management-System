@@ -51,6 +51,9 @@
             this.deleteemployee = new System.Windows.Forms.Button();
             this.updateemployee = new System.Windows.Forms.Button();
             this.addemployee = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -58,9 +61,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(455, 45);
+            this.dataGridView1.Location = new System.Drawing.Point(400, 50);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(321, 240);
+            this.dataGridView1.Size = new System.Drawing.Size(377, 240);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -69,7 +72,7 @@
             this.back.BackColor = System.Drawing.Color.Black;
             this.back.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.back.ForeColor = System.Drawing.SystemColors.Control;
-            this.back.Location = new System.Drawing.Point(706, 12);
+            this.back.Location = new System.Drawing.Point(707, 17);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(75, 32);
             this.back.TabIndex = 11;
@@ -79,15 +82,18 @@
             // 
             // searchbox
             // 
-            this.searchbox.Location = new System.Drawing.Point(510, 19);
+            this.searchbox.Location = new System.Drawing.Point(549, 24);
             this.searchbox.Name = "searchbox";
-            this.searchbox.Size = new System.Drawing.Size(179, 20);
+            this.searchbox.Size = new System.Drawing.Size(141, 20);
             this.searchbox.TabIndex = 12;
             this.searchbox.TextChanged += new System.EventHandler(this.searchbox_TextChanged);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.refresh);
             this.groupBox1.Controls.Add(this.salary);
             this.groupBox1.Controls.Add(this.email);
@@ -107,9 +113,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.name);
             this.groupBox1.Controls.Add(this.ProfileName);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(1, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(787, 426);
+            this.groupBox1.Size = new System.Drawing.Size(798, 436);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -119,7 +125,7 @@
             this.refresh.BackColor = System.Drawing.Color.White;
             this.refresh.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refresh.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.refresh.Location = new System.Drawing.Point(455, 291);
+            this.refresh.Location = new System.Drawing.Point(400, 296);
             this.refresh.Name = "refresh";
             this.refresh.Size = new System.Drawing.Size(80, 34);
             this.refresh.TabIndex = 19;
@@ -129,14 +135,14 @@
             // 
             // salary
             // 
-            this.salary.Location = new System.Drawing.Point(132, 187);
+            this.salary.Location = new System.Drawing.Point(133, 192);
             this.salary.Name = "salary";
             this.salary.Size = new System.Drawing.Size(156, 20);
             this.salary.TabIndex = 18;
             // 
             // email
             // 
-            this.email.Location = new System.Drawing.Point(132, 154);
+            this.email.Location = new System.Drawing.Point(133, 159);
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(156, 20);
             this.email.TabIndex = 17;
@@ -147,7 +153,7 @@
             this.label6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Font = new System.Drawing.Font("Arial Narrow", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(6, 187);
+            this.label6.Location = new System.Drawing.Point(7, 192);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 20);
             this.label6.TabIndex = 16;
@@ -159,7 +165,7 @@
             this.label5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Font = new System.Drawing.Font("Arial Narrow", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(6, 158);
+            this.label5.Location = new System.Drawing.Point(7, 163);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 20);
             this.label5.TabIndex = 15;
@@ -169,7 +175,7 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.BackColor = System.Drawing.Color.White;
-            this.radioButton2.Location = new System.Drawing.Point(229, 131);
+            this.radioButton2.Location = new System.Drawing.Point(230, 136);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(67, 17);
             this.radioButton2.TabIndex = 14;
@@ -181,7 +187,7 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.BackColor = System.Drawing.Color.White;
-            this.radioButton1.Location = new System.Drawing.Point(132, 131);
+            this.radioButton1.Location = new System.Drawing.Point(133, 136);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(54, 17);
             this.radioButton1.TabIndex = 13;
@@ -195,7 +201,7 @@
             this.label4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(6, 129);
+            this.label4.Location = new System.Drawing.Point(7, 134);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 20);
             this.label4.TabIndex = 12;
@@ -203,7 +209,7 @@
             // 
             // password
             // 
-            this.password.Location = new System.Drawing.Point(132, 98);
+            this.password.Location = new System.Drawing.Point(133, 103);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(156, 20);
             this.password.TabIndex = 11;
@@ -214,7 +220,7 @@
             this.label3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(6, 99);
+            this.label3.Location = new System.Drawing.Point(7, 104);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 20);
             this.label3.TabIndex = 10;
@@ -222,7 +228,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(132, 70);
+            this.dateTimePicker1.Location = new System.Drawing.Point(133, 75);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 9;
@@ -233,7 +239,7 @@
             this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(6, 70);
+            this.label2.Location = new System.Drawing.Point(7, 75);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 20);
             this.label2.TabIndex = 8;
@@ -246,7 +252,7 @@
             "Manager",
             "Cashier",
             "Store Clerk"});
-            this.position.Location = new System.Drawing.Point(132, 39);
+            this.position.Location = new System.Drawing.Point(133, 44);
             this.position.Name = "position";
             this.position.Size = new System.Drawing.Size(156, 21);
             this.position.TabIndex = 7;
@@ -257,7 +263,7 @@
             this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(6, 41);
+            this.label1.Location = new System.Drawing.Point(7, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 20);
             this.label1.TabIndex = 6;
@@ -265,7 +271,7 @@
             // 
             // name
             // 
-            this.name.Location = new System.Drawing.Point(132, 11);
+            this.name.Location = new System.Drawing.Point(133, 16);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(156, 20);
             this.name.TabIndex = 5;
@@ -276,7 +282,7 @@
             this.ProfileName.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ProfileName.Font = new System.Drawing.Font("Arial Narrow", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProfileName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ProfileName.Location = new System.Drawing.Point(6, 12);
+            this.ProfileName.Location = new System.Drawing.Point(7, 17);
             this.ProfileName.Name = "ProfileName";
             this.ProfileName.Size = new System.Drawing.Size(43, 20);
             this.ProfileName.TabIndex = 4;
@@ -320,6 +326,37 @@
             this.addemployee.Text = "ADD EMPLOYEE";
             this.addemployee.UseVisualStyleBackColor = false;
             this.addemployee.Click += new System.EventHandler(this.addemployee_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Workers Currently Employed",
+            "Workers Fired"});
+            this.comboBox1.Location = new System.Drawing.Point(400, 25);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(143, 21);
+            this.comboBox1.TabIndex = 20;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(397, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(152, 13);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Choose the status of employee";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(606, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(41, 13);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "Search";
             // 
             // Employee
             // 
@@ -367,5 +404,8 @@
         private System.Windows.Forms.Button updateemployee;
         private System.Windows.Forms.Button addemployee;
         private System.Windows.Forms.Button refresh;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

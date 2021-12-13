@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.refresh = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.totalcost = new System.Windows.Forms.TextBox();
+            this.sellingprice = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.price = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,7 +44,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.stockcategory = new System.Windows.Forms.ComboBox();
             this.stockCat = new System.Windows.Forms.Label();
-            this.refresh = new System.Windows.Forms.Button();
+            this.stockremainder = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -51,9 +53,11 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.stockremainder);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.refresh);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.totalcost);
+            this.groupBox1.Controls.Add(this.sellingprice);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.price);
             this.groupBox1.Controls.Add(this.label3);
@@ -73,11 +77,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // refresh
+            // 
+            this.refresh.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refresh.Location = new System.Drawing.Point(575, 10);
+            this.refresh.Name = "refresh";
+            this.refresh.Size = new System.Drawing.Size(95, 27);
+            this.refresh.TabIndex = 20;
+            this.refresh.Text = "REFRESH";
+            this.refresh.UseVisualStyleBackColor = false;
+            this.refresh.Click += new System.EventHandler(this.refresh_Click);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(200, 263);
+            this.button1.Location = new System.Drawing.Point(202, 318);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(162, 66);
             this.button1.TabIndex = 19;
@@ -85,12 +101,12 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // totalcost
+            // sellingprice
             // 
-            this.totalcost.Location = new System.Drawing.Point(167, 193);
-            this.totalcost.Name = "totalcost";
-            this.totalcost.Size = new System.Drawing.Size(160, 20);
-            this.totalcost.TabIndex = 18;
+            this.sellingprice.Location = new System.Drawing.Point(167, 193);
+            this.sellingprice.Name = "sellingprice";
+            this.sellingprice.Size = new System.Drawing.Size(160, 20);
+            this.sellingprice.TabIndex = 18;
             // 
             // label2
             // 
@@ -100,9 +116,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(6, 193);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 20);
+            this.label2.Size = new System.Drawing.Size(86, 20);
             this.label2.TabIndex = 17;
-            this.label2.Text = "Total Cost";
+            this.label2.Text = "Selling Price";
             // 
             // price
             // 
@@ -148,7 +164,7 @@
             // 
             this.add.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.add.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add.Location = new System.Drawing.Point(4, 263);
+            this.add.Location = new System.Drawing.Point(6, 318);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(162, 66);
             this.add.TabIndex = 12;
@@ -230,17 +246,24 @@
             this.stockCat.TabIndex = 6;
             this.stockCat.Text = "Stock Category";
             // 
-            // refresh
+            // stockremainder
             // 
-            this.refresh.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refresh.Location = new System.Drawing.Point(575, 10);
-            this.refresh.Name = "refresh";
-            this.refresh.Size = new System.Drawing.Size(95, 27);
-            this.refresh.TabIndex = 20;
-            this.refresh.Text = "REFRESH";
-            this.refresh.UseVisualStyleBackColor = false;
-            this.refresh.Click += new System.EventHandler(this.refresh_Click);
+            this.stockremainder.Location = new System.Drawing.Point(168, 238);
+            this.stockremainder.Name = "stockremainder";
+            this.stockremainder.Size = new System.Drawing.Size(160, 20);
+            this.stockremainder.TabIndex = 22;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Font = new System.Drawing.Font("Arial Narrow", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(7, 238);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(112, 20);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Stock Remainder";
             // 
             // AddStock
             // 
@@ -272,11 +295,13 @@
         private System.Windows.Forms.Button add;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox totalcost;
+        private System.Windows.Forms.TextBox sellingprice;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox price;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button refresh;
+        private System.Windows.Forms.TextBox stockremainder;
+        private System.Windows.Forms.Label label4;
     }
 }

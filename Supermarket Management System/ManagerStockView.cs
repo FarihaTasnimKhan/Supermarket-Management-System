@@ -51,7 +51,8 @@ namespace Supermarket_Management_System
                 stocks.Quantity= reader["Quantity"].ToString();
                 stocks.PricePerUnit = reader["PricePerUnit"].ToString();
                 stocks.TotalCostOfStock = reader["TotalCostOfStock"].ToString();
-               
+                stocks.SellingPrice = reader["SellingPrice"].ToString();
+
 
 
                 list.Add(stocks);
@@ -63,7 +64,7 @@ namespace Supermarket_Management_System
         {
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Stock"].ConnectionString);
             connection.Open();
-            string sql = "UPDATE Stock SET PricePerUnit='" + textBox1.Text + "' WHERE Id=" + Id;
+            string sql = "UPDATE Stock SET SellingPrice='" + textBox1.Text + "' WHERE Id=" + Id;
             SqlCommand command = new SqlCommand(sql, connection);
             int result = command.ExecuteNonQuery();
             connection.Close();
@@ -99,7 +100,7 @@ namespace Supermarket_Management_System
         {
             Id = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
             Item.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
            
         }
 

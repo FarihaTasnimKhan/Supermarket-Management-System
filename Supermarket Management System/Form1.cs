@@ -14,6 +14,12 @@ namespace Supermarket_Management_System
 {
     public partial class Form1 : Form
     {
+        public static string SetValueForText1 = ""; // to show name of manager
+        public static string SetValueForText2 = ""; // to show name of manager
+
+        public static string SetValueForText3 = ""; // to show name of cashier
+        public static string SetValueForText5 = ""; // to show name of admin
+
         public Form1()
         {
             InitializeComponent();
@@ -35,28 +41,44 @@ namespace Supermarket_Management_System
             SqlDataAdapter sda = new SqlDataAdapter(command);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            string cmbItemValue = comboBox1.SelectedItem.ToString();
+           string cmbItemValue = comboBox1.SelectedItem.ToString();
             if(dt.Rows.Count > 0)
             {
                 for(int i=0; i<dt.Rows.Count;i++)
                 {
                     if(dt.Rows[i]["Position"].ToString()==cmbItemValue)
                     {
-                        MessageBox.Show("YOU ARE LOGGED IN AS---> "+dt.Rows[i][2]);
-                        if(comboBox1.SelectedIndex==0)
+                        MessageBox.Show("YOU ARE LOGGING IN AS :   "+dt.Rows[i][2]);
+
+                        if(comboBox1.SelectedIndex==0)//admin login
                         {
+                            SetValueForText5 = textBox1.Text;   // to show name of manager
                             Admin admin = new Admin();
                             admin.Show();
                             this.Hide();
                         }
-                      else  if(comboBox1.SelectedIndex ==1)
+                      else  if(comboBox1.SelectedIndex ==1)//manager login
                         {
+                            SetValueForText1 = textBox1.Text;   // to show name of manager
+
+
                             Manager manager = new Manager();
                             manager.Show();
                             this.Hide();
                             
                         }
+                        else if (comboBox1.SelectedIndex == 3)//cashier login
+                        {
+                             SetValueForText3 = textBox1.Text;   // to show name of cashier
+
+
+                            CashierDashboard cd = new CashierDashboard();
+                            cd.Show();
+                            this.Hide();
+
+                        }
                     }
+                   
                 }
             }
             else
@@ -66,7 +88,7 @@ namespace Supermarket_Management_System
         
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)// password show or not show
         {
             if (button2.BackColor == Color.Black)
             {
@@ -79,5 +101,7 @@ namespace Supermarket_Management_System
                 button2.BackColor = Color.Black;
             }
         }
+
+      
     }
 }

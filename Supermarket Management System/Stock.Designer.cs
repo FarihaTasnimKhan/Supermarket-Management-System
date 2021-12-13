@@ -33,13 +33,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.set = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.refresh = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.Item = new System.Windows.Forms.TextBox();
-            this.refresh = new System.Windows.Forms.Button();
+            this.set = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.SellingPrice = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -77,6 +77,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "SEND STOCK OUT REMAINDER";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -98,7 +99,7 @@
             this.groupBox1.Controls.Add(this.Item);
             this.groupBox1.Controls.Add(this.set);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.SellingPrice);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.label1);
@@ -110,6 +111,38 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // refresh
+            // 
+            this.refresh.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refresh.Location = new System.Drawing.Point(580, 412);
+            this.refresh.Name = "refresh";
+            this.refresh.Size = new System.Drawing.Size(94, 27);
+            this.refresh.TabIndex = 22;
+            this.refresh.Text = "REFRESH";
+            this.refresh.UseVisualStyleBackColor = false;
+            this.refresh.Click += new System.EventHandler(this.refresh_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label4.Location = new System.Drawing.Point(516, 117);
+            this.label4.Name = "label4";
+            this.label4.Padding = new System.Windows.Forms.Padding(5);
+            this.label4.Size = new System.Drawing.Size(92, 26);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Item Name";
+            // 
+            // Item
+            // 
+            this.Item.Location = new System.Drawing.Point(660, 117);
+            this.Item.Name = "Item";
+            this.Item.Size = new System.Drawing.Size(144, 20);
+            this.Item.TabIndex = 20;
             // 
             // set
             // 
@@ -129,19 +162,19 @@
             this.label3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(521, 167);
+            this.label3.Location = new System.Drawing.Point(516, 161);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(5);
-            this.label3.Size = new System.Drawing.Size(86, 26);
+            this.label3.Size = new System.Drawing.Size(138, 26);
             this.label3.TabIndex = 18;
-            this.label3.Text = "Price/Unit";
+            this.label3.Text = "Selling Price/Unit";
             // 
-            // textBox1
+            // SellingPrice
             // 
-            this.textBox1.Location = new System.Drawing.Point(636, 167);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 20);
-            this.textBox1.TabIndex = 17;
+            this.SellingPrice.Location = new System.Drawing.Point(660, 167);
+            this.SellingPrice.Name = "SellingPrice";
+            this.SellingPrice.Size = new System.Drawing.Size(144, 20);
+            this.SellingPrice.TabIndex = 17;
             // 
             // label2
             // 
@@ -155,38 +188,6 @@
             this.label2.Size = new System.Drawing.Size(187, 30);
             this.label2.TabIndex = 16;
             this.label2.Text = "SET STOCK PRICES";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(521, 117);
-            this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(5);
-            this.label4.Size = new System.Drawing.Size(92, 26);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Item Name";
-            // 
-            // Item
-            // 
-            this.Item.Location = new System.Drawing.Point(636, 116);
-            this.Item.Name = "Item";
-            this.Item.Size = new System.Drawing.Size(144, 20);
-            this.Item.TabIndex = 20;
-            // 
-            // refresh
-            // 
-            this.refresh.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refresh.Location = new System.Drawing.Point(580, 412);
-            this.refresh.Name = "refresh";
-            this.refresh.Size = new System.Drawing.Size(94, 27);
-            this.refresh.TabIndex = 22;
-            this.refresh.Text = "REFRESH";
-            this.refresh.UseVisualStyleBackColor = false;
-            this.refresh.Click += new System.EventHandler(this.refresh_Click);
             // 
             // Stock
             // 
@@ -214,7 +215,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button set;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox SellingPrice;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox Item;

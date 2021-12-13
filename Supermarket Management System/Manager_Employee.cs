@@ -32,10 +32,10 @@ namespace Supermarket_Management_System
                 gen = "Male";
             }
 
-
+            string status = "CurrentlyEmployed";
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["EmployeeTable"].ConnectionString);
             connection.Open();
-            string sql = "INSERT INTO EmployeeTable(Position,Name,DateOfBirth,Password,Gender,Email,Salary) VALUES('" + position.Text + "','" + name.Text + "','" + dateTimePicker1.Text + "','" + password.Text + "','" + gen + "','" + email.Text + "','" + salary.Text + "')";
+            string sql = "INSERT INTO EmployeeTable(Position,Name,DateOfBirth,Password,Gender,Email,Salary) VALUES('" + position.Text + "','" + name.Text + "','" + dateTimePicker1.Text + "','" + password.Text + "','" + gen + "','" + email.Text + "','" + salary.Text + "','" + status + "')";
             SqlCommand command = new SqlCommand(sql, connection);
             int result = command.ExecuteNonQuery();
             connection.Close();
@@ -88,6 +88,44 @@ namespace Supermarket_Management_System
                 em.Show();
                 this.Hide();
             }
+
+
+
+
+
+          /*  SqlConnection connection1 = new SqlConnection(ConfigurationManager.ConnectionStrings["Message"].ConnectionString);//insertion in message table
+            connection1.Open();
+            string sql1 = "INSERT INTO Message(Position,[From]) VALUES('" + position.Text + "','" + name.Text + "')";
+            SqlCommand command1 = new SqlCommand(sql1, connection1);
+            int result1 = command1.ExecuteNonQuery();
+            connection1.Close();
+
+            if (result1 > 0)
+            {
+
+                {
+                    if (name.Text == "")
+                    {
+                        MessageBox.Show("Please mention the NAME of the employee");
+                    }
+                    else if (position.Text == "")
+                    {
+                        MessageBox.Show("Please mention the POSITION of the employee");
+                    }
+                    else if (dateTimePicker1.Text == "")
+                    {
+                        MessageBox.Show("Please mention the BIRTH DATE of the employee");
+                    }
+
+                }
+
+            }
+
+            else
+            {
+                MessageBox.Show("Error!!!.\nTHE EMPLOYEE WAS NOT ADDED.\nPlease try again.");
+
+            }*/
         }
 
         private void updateemployee_Click(object sender, EventArgs e)
@@ -171,6 +209,7 @@ namespace Supermarket_Management_System
                 AE.Gender = reader["Gender"].ToString();
                 AE.Email = reader["Email"].ToString();
                 AE.Salary = reader["Salary"].ToString();
+                AE.EmployeeStatus = reader["EmployeeStatus"].ToString();
 
 
                 list.Add(AE);

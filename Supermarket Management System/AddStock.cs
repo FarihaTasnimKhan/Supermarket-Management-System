@@ -36,7 +36,7 @@ namespace Supermarket_Management_System
         {
           SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Stock"].ConnectionString);
             connection.Open();
-            string sql = "INSERT INTO Stock(StockCategory,ItemName,Quantity) VALUES('" + stockcategory.Text + "','" + item.Text + "','" + quantitytextbox.Text + "')";
+            string sql = "INSERT INTO Stock(StockCategory,ItemName,Quantity,PricePerUnit,SellingPrice) VALUES('" + stockcategory.Text + "','" + item.Text + "','" + quantitytextbox.Text + "','"+price.Text+"','"+sellingprice.Text+"')";
             SqlCommand command = new SqlCommand(sql, connection);
             int result = command.ExecuteNonQuery();
             connection.Close();
@@ -79,10 +79,10 @@ namespace Supermarket_Management_System
 
         private void button1_Click(object sender, EventArgs e)//ADD TO EXISTING STOCK
         {
-
+           
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Stock"].ConnectionString);
             connection.Open();
-            string sql = "UPDATE Stock SET StockCategory='" + stockcategory.Text + "',ItemName='" + item.Text + "',Quantity='" + quantitytextbox.Text+ "'       WHERE Id=" + Id;
+            string sql = "UPDATE Stock SET StockCategory='" + stockcategory.Text + "',ItemName='" + item.Text + "',Quantity='" + quantitytextbox.Text+ "' ,StockRemainderFromAdmin='" + stockremainder.Text+"'      WHERE Id=" + Id;
 
 
 
@@ -91,7 +91,17 @@ namespace Supermarket_Management_System
             connection.Close();
             if (result > 0)
             {
+               
+                
                 MessageBox.Show("UPDATED");
+
+                /* MessageBox.Show("UPDATED");
+                 SqlConnection connection1 = new SqlConnection(ConfigurationManager.ConnectionStrings["Stock"].ConnectionString);
+                 connection1.Open();
+                 string sql1 = "UPDATE Stock SET StockRemainderFromAdmin='" + 0.ToString() + "'     WHERE ItemName='" + item.Text + "' ";
+                 SqlCommand command1 = new SqlCommand(sql1, connection1);
+                 int result1 = command.ExecuteNonQuery();
+                 connection1.Close();*/
             }
             else
             {
@@ -102,9 +112,10 @@ namespace Supermarket_Management_System
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Id = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
-            stockcategory.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            item.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            price.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            stockcategory.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            item.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            price.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            sellingprice.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -125,6 +136,7 @@ namespace Supermarket_Management_System
                 stocks.Quantity = reader["Quantity"].ToString();
                 stocks.PricePerUnit = reader["PricePerUnit"].ToString();
                 stocks.TotalCostOfStock = reader["TotalCostOfStock"].ToString();
+                stocks.SellingPrice = reader["SellingPrice"].ToString();
 
 
 

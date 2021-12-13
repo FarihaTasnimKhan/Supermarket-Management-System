@@ -14,6 +14,7 @@ namespace Supermarket_Management_System
 { 
     public partial class Employee : Form
     {
+       
         int Id;
 
         public Employee()
@@ -45,10 +46,10 @@ namespace Supermarket_Management_System
                 gen = "Male";
             }
 
-
+            string status = "CurrentlyEmployed";
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["EmployeeTable"].ConnectionString);
             connection.Open();
-            string sql = "INSERT INTO EmployeeTable(Position,Name,DateOfBirth,Password,Gender,Email,Salary) VALUES('" + position.Text + "','" + name.Text + "','" + dateTimePicker1.Text + "','" + password.Text + "','" + gen + "','" + email.Text + "','" + salary.Text + "')";
+            string sql = "INSERT INTO EmployeeTable(Position,Name,DateOfBirth,Password,Gender,Email,Salary,EmployeeStatus) VALUES('" + position.Text + "','" + name.Text + "','" + dateTimePicker1.Text + "','" + password.Text + "','" + gen + "','" + email.Text + "','" + salary.Text + "','"+status+"')";
             SqlCommand command = new SqlCommand(sql, connection);
             int result = command.ExecuteNonQuery();
             connection.Close();
@@ -103,7 +104,6 @@ namespace Supermarket_Management_System
             }
 
 
-
         }
 
         private void groupBox1_Enter(object sender, EventArgs e) //GRID VIEW
@@ -125,6 +125,7 @@ namespace Supermarket_Management_System
                 AE.Gender = reader["Gender"].ToString();
                 AE.Email = reader["Email"].ToString();
                 AE.Salary = reader["Salary"].ToString();
+                AE.EmployeeStatus = reader["EmployeeStatus"].ToString();
 
 
                 list.Add(AE);
@@ -165,6 +166,7 @@ namespace Supermarket_Management_System
                 password.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
                 email.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
                 salary.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+                
 
 
 

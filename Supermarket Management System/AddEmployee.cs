@@ -16,5 +16,8 @@ namespace Supermarket_Management_System
         public string Gender { get; set; }
         public string Email { get; set; }
         public string Salary { get; set; }
+        public string EmployeeStatus { get; set; }
+     
+
     }
 }

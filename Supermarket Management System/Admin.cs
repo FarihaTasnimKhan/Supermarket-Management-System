@@ -68,5 +68,19 @@ namespace Supermarket_Management_System
             stock.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            EmployeeAttendance_Admin_ em = new EmployeeAttendance_Admin_();
+            em.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Messages_admin_ ma = new Messages_admin_();
+            ma.Show();
+            this.Hide();
+        }
     }
 }
