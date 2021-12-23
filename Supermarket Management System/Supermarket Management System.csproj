@@ -98,6 +98,18 @@
     <Compile Include="EmployeeAttendances%28Manager%29.Designer.cs">
       <DependentUpon>EmployeeAttendances%28Manager%29.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeVacationAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeVacationAdmin.Designer.cs">
+      <DependentUpon>EmployeeVacationAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeVacationManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeVacationManager.Designer.cs">
+      <DependentUpon>EmployeeVacationManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,11 +173,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="PurchaseList.cs" />
     <Compile Include="Sales%28cashier%29.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Sales%28cashier%29.Designer.cs">
       <DependentUpon>Sales%28cashier%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesClerkAccountSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesClerkAccountSettings.Designer.cs">
+      <DependentUpon>SalesClerkAccountSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesClerkDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesClerkDashboard.Designer.cs">
+      <DependentUpon>SalesClerkDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesClerkMessages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesClerkMessages.Designer.cs">
+      <DependentUpon>SalesClerkMessages.cs</DependentUpon>
     </Compile>
     <Compile Include="Stock.cs">
       <SubType>Form</SubType>
@@ -174,6 +205,8 @@
       <DependentUpon>Stock.cs</DependentUpon>
     </Compile>
     <Compile Include="Stocks.cs" />
+    <Compile Include="Supplier.cs" />
+    <Compile Include="VacationAdmin.cs" />
     <EmbeddedResource Include="AccountSettings.resx">
       <DependentUpon>AccountSettings.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +230,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeAttendances%28Manager%29.resx">
       <DependentUpon>EmployeeAttendances%28Manager%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeVacationAdmin.resx">
+      <DependentUpon>EmployeeVacationAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeVacationManager.resx">
+      <DependentUpon>EmployeeVacationManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -232,6 +271,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sales%28cashier%29.resx">
       <DependentUpon>Sales%28cashier%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesClerkAccountSettings.resx">
+      <DependentUpon>SalesClerkAccountSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesClerkDashboard.resx">
+      <DependentUpon>SalesClerkDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesClerkMessages.resx">
+      <DependentUpon>SalesClerkMessages.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stock.resx">
       <DependentUpon>Stock.cs</DependentUpon>
@@ -419,6 +467,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cashier3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clerk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clerkk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cashh2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock9.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vacation.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VVV.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VVV1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

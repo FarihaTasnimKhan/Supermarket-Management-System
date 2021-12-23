@@ -20,6 +20,8 @@ namespace Supermarket_Management_System
         public static string SetValueForText3 = ""; // to show name of cashier
         public static string SetValueForText5 = ""; // to show name of admin
 
+        public static string SetValueForText6 = ""; // to show name of admin
+
         public Form1()
         {
             InitializeComponent();
@@ -74,6 +76,16 @@ namespace Supermarket_Management_System
 
                             CashierDashboard cd = new CashierDashboard();
                             cd.Show();
+                            this.Hide();
+
+                        }
+                        else if (comboBox1.SelectedIndex == 2)//SALES CLERK login
+                        {
+                            SetValueForText6 = textBox1.Text;   // to show name of sales clerk
+
+
+                            SalesClerkDashboard sd = new SalesClerkDashboard();
+                            sd.Show();
                             this.Hide();
 
                         }

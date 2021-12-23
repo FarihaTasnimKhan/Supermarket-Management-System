@@ -58,6 +58,29 @@ namespace Supermarket_Management_System
                 list.Add(stocks);
             }
             dataGridView2.DataSource = list;
+
+
+
+
+            SqlConnection connection1 = new SqlConnection(ConfigurationManager.ConnectionStrings["StockPurchaseList"].ConnectionString);
+            connection1.Open();
+            string sql1 = "SELECT * FROM StockPurchaseList";
+            SqlCommand command1 = new SqlCommand(sql1, connection1);
+            SqlDataReader reader12 = command1.ExecuteReader();
+            List<PurchaseList> list1 = new List<PurchaseList>();
+            while (reader12.Read())
+            {
+                PurchaseList stocks1 = new PurchaseList();
+
+                stocks1.Name = reader12["Name"].ToString();
+                stocks1.Date = reader12["Date"].ToString();
+                stocks1.Quantity = reader12["Quantity"].ToString();
+
+
+
+                list1.Add(stocks1);
+            }
+            dataGridView1.DataSource = list1;
         }
 
         private void set_Click(object sender, EventArgs e)// sets stock price
@@ -110,7 +133,58 @@ namespace Supermarket_Management_System
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+       
+
+        private void refresh_Click_1(object sender, EventArgs e)
+        {
+            Stock s = new Stock();
+            s.Show();
+            this.Hide();
+        }
+
+        private void dataGridView2_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            Id = (int)dataGridView2.Rows[e.RowIndex].Cells[0].Value;
+            Item.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
+            SellingPrice.Text = dataGridView2.Rows[e.RowIndex].Cells[7].Value.ToString();
+        }
+
+        private void set_Click_1(object sender, EventArgs e)
+        {
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Stock"].ConnectionString);
+            connection.Open();
+            string sql = "UPDATE Stock SET SellingPrice='" + SellingPrice.Text + "' WHERE Id=" + Id;
+            SqlCommand command = new SqlCommand(sql, connection);
+            int result = command.ExecuteNonQuery();
+            connection.Close();
+
+            if (result > 0)
+            {
+
+                {
+                    if (SellingPrice.Text == "")
+                    {
+                        MessageBox.Show("Please mention the PRICE.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("THE STOCK PRICE IS SUCCESSFULLY ADDED.");
+
+                    }
+                }
+
+            }
+
+            else
+            {
+                MessageBox.Show("Error!!!.\nTHE PRICE WAS NOT ADDED.\nPlease try again.");
+                Stock addstock = new Stock();
+                addstock.Show();
+                this.Hide();
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)//stock remainder.
         {
 
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Stock"].ConnectionString);
@@ -134,8 +208,6 @@ namespace Supermarket_Management_System
                 stock.Show();
                 this.Hide();
             }
-
-
         }
     }
 }

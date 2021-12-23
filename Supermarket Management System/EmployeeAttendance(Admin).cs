@@ -135,6 +135,11 @@ namespace Supermarket_Management_System
 
         }
 
-       
+        private void button3_Click(object sender, EventArgs e)//employee vacation
+        {
+            EmployeeVacationAdmin em = new EmployeeVacationAdmin();
+            em.Show();
+            this.Hide();
+        }
     } 
 }

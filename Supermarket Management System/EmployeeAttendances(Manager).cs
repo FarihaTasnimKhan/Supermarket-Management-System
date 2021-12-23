@@ -127,5 +127,12 @@ namespace Supermarket_Management_System
                 MessageBox.Show("Error");
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)//employee vacation
+        {
+            EmployeeVacationManager em = new EmployeeVacationManager();
+            em.Show();
+            this.Hide();
+        }
     }
 }

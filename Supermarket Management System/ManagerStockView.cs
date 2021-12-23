@@ -14,7 +14,7 @@ namespace Supermarket_Management_System
 {
     public partial class ManagerStockView : Form
     {
-        int Id;
+        int Id; 
         public ManagerStockView()
         {
             InitializeComponent();
@@ -58,51 +58,32 @@ namespace Supermarket_Management_System
                 list.Add(stocks);
             }
             dataGridView1.DataSource = list;
-        }
 
-        private void set_Click(object sender, EventArgs e) //sets price of stock
-        {
-            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Stock"].ConnectionString);
-            connection.Open();
-            string sql = "UPDATE Stock SET SellingPrice='" + textBox1.Text + "' WHERE Id=" + Id;
-            SqlCommand command = new SqlCommand(sql, connection);
-            int result = command.ExecuteNonQuery();
-            connection.Close();
 
-            if (result > 0)
+            SqlConnection connection1 = new SqlConnection(ConfigurationManager.ConnectionStrings["StockPurchaseList"].ConnectionString);
+            connection1.Open();
+            string sql1 = "SELECT * FROM StockPurchaseList";
+            SqlCommand command1 = new SqlCommand(sql1, connection1);
+            SqlDataReader reader12 = command1.ExecuteReader();
+            List<PurchaseList> list1 = new List<PurchaseList>();
+            while (reader12.Read())
             {
+               PurchaseList stocks1 = new PurchaseList();
+               
+                stocks1.Name = reader12["Name"].ToString();
+                stocks1.Date = reader12["Date"].ToString();
+                stocks1.Quantity= reader12["Quantity"].ToString();
 
-                {
-                    if (textBox1.Text == "")
-                    {
-                        MessageBox.Show("Please mention the PRICE.");
-                    }
-                   else
-                    {
-                        MessageBox.Show("THE STOCK PRICE IS SUCCESSFULLY ADDED.");
 
-                    }
-                }
 
+                list1.Add(stocks1);
             }
-
-            else
-            {
-                MessageBox.Show("Error!!!.\nTHE PRICE WAS NOT ADDED.\nPlease try again.");
-                AddStock addstock = new AddStock();
-                addstock.Show();
-                this.Hide();
-            }
-
+            dataGridView2.DataSource = list1;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            Id = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
-            Item.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
-           
-        }
+        
+
+       
 
         private void refresh_Click(object sender, EventArgs e)//refresh
         {

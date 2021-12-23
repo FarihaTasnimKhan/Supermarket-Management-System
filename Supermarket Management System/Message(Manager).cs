@@ -58,7 +58,7 @@ namespace Supermarket_Management_System
         {
             SqlConnection connection1 = new SqlConnection(ConfigurationManager.ConnectionStrings["Message"].ConnectionString);
             connection1.Open();
-            string sql1 = "INSERT INTO Message(Position,[From],[To],Message,Date) VALUES('" + position.Text + "','" + Form1.SetValueForText3 + "','" + to.Text + "','" + textBox1.Text + "','" + Date + "')";
+            string sql1 = "INSERT INTO Message(Position,[From],[To],Message,Date,Subject) VALUES('" + position.Text + "','" + Form1.SetValueForText3 + "','" + to.Text + "','" + textBox1.Text + "','" + Date + "','"+comboBox1.Text+"')";
             SqlCommand command1 = new SqlCommand(sql1, connection1);
             int result1 = command1.ExecuteNonQuery();
             connection1.Close();

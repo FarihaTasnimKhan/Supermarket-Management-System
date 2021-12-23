@@ -82,5 +82,7 @@ namespace Supermarket_Management_System
             ma.Show();
             this.Hide();
         }
+
+     
     }
 }

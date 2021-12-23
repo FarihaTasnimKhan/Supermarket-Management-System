@@ -104,9 +104,9 @@
             this.button4.ForeColor = System.Drawing.SystemColors.Control;
             this.button4.Location = new System.Drawing.Point(21, 169);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(139, 43);
+            this.button4.Size = new System.Drawing.Size(139, 69);
             this.button4.TabIndex = 24;
-            this.button4.Text = "Messages";
+            this.button4.Text = "Message And\r\nRequest For Vacation";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -149,7 +149,7 @@
             this.SettingsButton.BackColor = System.Drawing.Color.Black;
             this.SettingsButton.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.SettingsButton.Location = new System.Drawing.Point(21, 229);
+            this.SettingsButton.Location = new System.Drawing.Point(21, 253);
             this.SettingsButton.Name = "SettingsButton";
             this.SettingsButton.Size = new System.Drawing.Size(139, 43);
             this.SettingsButton.TabIndex = 4;

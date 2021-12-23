@@ -44,5 +44,6 @@ namespace Supermarket_Management_System
             addstock.Show();
             this.Hide();
         }
+
     }
 }

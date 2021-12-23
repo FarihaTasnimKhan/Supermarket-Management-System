@@ -14,15 +14,16 @@ namespace Supermarket_Management_System
 {
     public partial class AddStock : Form
     {
-        int Id;
+        int Id; public string Date;
         public AddStock()
         {
-            InitializeComponent();
+            InitializeComponent(); Date = DateTime.Today.ToString("dddd , MMM dd yyyy");
         }
 
         private void AddStock_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+          
         }
 
         private void button2_Click(object sender, EventArgs e)//go back to stock dashboard
@@ -75,6 +76,24 @@ namespace Supermarket_Management_System
                 this.Hide();
             }
 
+
+
+            SqlConnection connection1 = new SqlConnection(ConfigurationManager.ConnectionStrings["StockPurchaseList"].ConnectionString); //stock purchase list er table e insertion 
+            connection1.Open();
+            string sql1 = "INSERT INTO StockPurchaseList(Name,Date,Quantity) VALUES('" + item.Text + "','" + Date + "','" + quantitytextbox.Text + "')";
+
+            SqlCommand command1 = new SqlCommand(sql1, connection1);
+            int result1 = command1.ExecuteNonQuery();
+            connection1.Close();
+            if (result1 > 0)
+            {
+
+
+            }
+            else
+            {
+                MessageBox.Show("Error");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)//ADD TO EXISTING STOCK
@@ -84,8 +103,6 @@ namespace Supermarket_Management_System
             connection.Open();
             string sql = "UPDATE Stock SET StockCategory='" + stockcategory.Text + "',ItemName='" + item.Text + "',Quantity='" + quantitytextbox.Text+ "' ,StockRemainderFromAdmin='" + stockremainder.Text+"'      WHERE Id=" + Id;
 
-
-
             SqlCommand command = new SqlCommand(sql, connection);
             int result = command.ExecuteNonQuery();
             connection.Close();
@@ -93,7 +110,7 @@ namespace Supermarket_Management_System
             {
                
                 
-                MessageBox.Show("UPDATED");
+                MessageBox.Show("STOCK ADDED.");
 
                 /* MessageBox.Show("UPDATED");
                  SqlConnection connection1 = new SqlConnection(ConfigurationManager.ConnectionStrings["Stock"].ConnectionString);
@@ -102,6 +119,24 @@ namespace Supermarket_Management_System
                  SqlCommand command1 = new SqlCommand(sql1, connection1);
                  int result1 = command.ExecuteNonQuery();
                  connection1.Close();*/
+            }
+            else
+            {
+                MessageBox.Show("Error");
+            }
+
+
+            SqlConnection connection1 = new SqlConnection(ConfigurationManager.ConnectionStrings["StockPurchaseList"].ConnectionString); //stock purchase list er table e insertion 
+            connection1.Open(); 
+            string sql1 = "INSERT INTO StockPurchaseList(Name,Date,Quantity) VALUES('" + item.Text + "','" + Date + "','" + quantitytextbox.Text + "')";
+
+            SqlCommand command1 = new SqlCommand(sql1, connection1);
+            int result1 = command1.ExecuteNonQuery();
+            connection1.Close();
+            if (result1 > 0)
+            {
+            
+           
             }
             else
             {
@@ -143,6 +178,27 @@ namespace Supermarket_Management_System
                 list.Add(stocks);
             }
             dataGridView1.DataSource = list;
+           
+
+            SqlConnection connection1 = new SqlConnection(ConfigurationManager.ConnectionStrings["Supplier"].ConnectionString);
+            connection1.Open();
+            string sql1 = "SELECT * FROM Supplier";
+            SqlCommand command1 = new SqlCommand(sql1, connection1);
+            SqlDataReader reader12 = command1.ExecuteReader();
+            List<Supplier> list1 = new List<Supplier>();
+            while (reader12.Read())
+            {
+                Supplier stocks1 = new Supplier();
+                
+                stocks1.Name = reader12["Name"].ToString();
+                stocks1.PricePerUnit = reader12["PricePerUnit"].ToString();
+            
+
+
+
+                list1.Add(stocks1);
+            }
+            dataGridView2.DataSource = list1;
         }
 
         private void refresh_Click(object sender, EventArgs e)
@@ -150,6 +206,15 @@ namespace Supermarket_Management_System
             AddStock addstock = new AddStock();
             addstock.Show();
             this.Hide();
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+           
+            item.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
+            price.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+           
         }
     }
 }
