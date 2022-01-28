@@ -50,7 +50,7 @@ namespace Supermarket_Management_System
                 stocks.ItemName = reader["ItemName"].ToString();
                 stocks.Quantity = reader["Quantity"].ToString();
                 stocks.PricePerUnit = reader["PricePerUnit"].ToString();
-                stocks.TotalCostOfStock = reader["TotalCostOfStock"].ToString();
+              //  stocks.TotalCostOfStock = reader["TotalCostOfStock"].ToString();
                 stocks.SellingPrice = reader["SellingPrice"].ToString();
 
 
@@ -76,7 +76,7 @@ namespace Supermarket_Management_System
                 stocks1.Date = reader12["Date"].ToString();
                 stocks1.Quantity = reader12["Quantity"].ToString();
 
-
+                stocks1.TotalCostOfStock = reader12["TotalCostOfStock"].ToString();
 
                 list1.Add(stocks1);
             }
@@ -146,7 +146,7 @@ namespace Supermarket_Management_System
         {
             Id = (int)dataGridView2.Rows[e.RowIndex].Cells[0].Value;
             Item.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
-            SellingPrice.Text = dataGridView2.Rows[e.RowIndex].Cells[7].Value.ToString();
+            SellingPrice.Text = dataGridView2.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
 
         private void set_Click_1(object sender, EventArgs e)
@@ -208,6 +208,13 @@ namespace Supermarket_Management_System
                 stock.Show();
                 this.Hide();
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)//stock profit
+        {
+            StockProfit s = new StockProfit();
+            s.Show();
+            this.Hide();
         }
     }
 }

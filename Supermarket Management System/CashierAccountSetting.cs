@@ -66,6 +66,11 @@ namespace Supermarket_Management_System
                 MessageBox.Show("Error");
             }
         }
+
+        private void CashierAccountSetting_Load(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

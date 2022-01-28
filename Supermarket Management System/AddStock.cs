@@ -126,9 +126,15 @@ namespace Supermarket_Management_System
             }
 
 
+           
+          
+
+
+
+
             SqlConnection connection1 = new SqlConnection(ConfigurationManager.ConnectionStrings["StockPurchaseList"].ConnectionString); //stock purchase list er table e insertion 
             connection1.Open(); 
-            string sql1 = "INSERT INTO StockPurchaseList(Name,Date,Quantity) VALUES('" + item.Text + "','" + Date + "','" + quantitytextbox.Text + "')";
+            string sql1 = "INSERT INTO StockPurchaseList(Name,Date,Quantity,TotalCostOfStock) VALUES('" + item.Text + "','" + Date + "','" + quantitytextbox.Text + "','"+textBox1.Text+"')";
 
             SqlCommand command1 = new SqlCommand(sql1, connection1);
             int result1 = command1.ExecuteNonQuery();
@@ -150,7 +156,7 @@ namespace Supermarket_Management_System
             stockcategory.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             item.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             price.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            sellingprice.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+            sellingprice.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -170,7 +176,7 @@ namespace Supermarket_Management_System
                 stocks.ItemName = reader["ItemName"].ToString();
                 stocks.Quantity = reader["Quantity"].ToString();
                 stocks.PricePerUnit = reader["PricePerUnit"].ToString();
-                stocks.TotalCostOfStock = reader["TotalCostOfStock"].ToString();
+               // stocks.TotalCostOfStock = reader["TotalCostOfStock"].ToString();
                 stocks.SellingPrice = reader["SellingPrice"].ToString();
 
 
@@ -215,6 +221,17 @@ namespace Supermarket_Management_System
             item.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
             price.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            double a, b, c1;
+            double.TryParse(quantitytextbox.Text, out a);
+            double.TryParse(price.Text, out b);
+            c1 = a * b;
+
+            if (c1 > 0)
+                textBox1.Text = c1.ToString("c").Remove(0, 1);
         }
     }
 }

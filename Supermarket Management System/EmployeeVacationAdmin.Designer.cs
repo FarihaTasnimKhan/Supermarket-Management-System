@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -38,8 +40,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -67,6 +67,27 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Navy;
+            this.label6.Location = new System.Drawing.Point(609, 189);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(89, 29);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Position";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(494, 189);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(89, 29);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Position";
             // 
             // button3
             // 
@@ -117,7 +138,6 @@
             this.label5.Size = new System.Drawing.Size(98, 29);
             this.label5.TabIndex = 6;
             this.label5.Text = "Message";
-//            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -129,7 +149,6 @@
             this.label4.Size = new System.Drawing.Size(69, 29);
             this.label4.TabIndex = 5;
             this.label4.Text = "Name";
-//            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -140,7 +159,6 @@
             this.label3.Size = new System.Drawing.Size(98, 29);
             this.label3.TabIndex = 4;
             this.label3.Text = "Message";
-//            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -151,7 +169,6 @@
             this.label2.Size = new System.Drawing.Size(69, 29);
             this.label2.TabIndex = 3;
             this.label2.Text = "Name";
-//            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // dataGridView1
             // 
@@ -167,46 +184,21 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(269, 32);
+            this.label1.Location = new System.Drawing.Point(425, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 76);
             this.label1.TabIndex = 1;
             this.label1.Text = "EMPLOYEE\r\nVACATION";
-//            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Navy;
-            this.label6.Location = new System.Drawing.Point(609, 189);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 29);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Position";
-//            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(494, 189);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 29);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Position";
-//            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Supermarket_Management_System.Properties.Resources.VVV1;
-            this.pictureBox1.Location = new System.Drawing.Point(-43, -37);
+            this.pictureBox1.Location = new System.Drawing.Point(113, -25);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(306, 255);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-//            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // EmployeeVacationAdmin
             // 

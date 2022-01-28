@@ -50,7 +50,7 @@ namespace Supermarket_Management_System
                 stocks.ItemName = reader["ItemName"].ToString();
                 stocks.Quantity= reader["Quantity"].ToString();
                 stocks.PricePerUnit = reader["PricePerUnit"].ToString();
-                stocks.TotalCostOfStock = reader["TotalCostOfStock"].ToString();
+             //   stocks.TotalCostOfStock = reader["TotalCostOfStock"].ToString();
                 stocks.SellingPrice = reader["SellingPrice"].ToString();
 
 
@@ -73,6 +73,7 @@ namespace Supermarket_Management_System
                 stocks1.Name = reader12["Name"].ToString();
                 stocks1.Date = reader12["Date"].ToString();
                 stocks1.Quantity= reader12["Quantity"].ToString();
+                stocks1.TotalCostOfStock = reader12["TotalCostOfStock"].ToString();
 
 
 

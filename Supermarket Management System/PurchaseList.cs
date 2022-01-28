@@ -13,6 +13,7 @@ namespace Supermarket_Management_System
         public string Name { get; set; }
         public string Date { get; set; }
         public string Quantity { get; set; }
+        public string TotalCostOfStock { get; set; }
 
     }
 }

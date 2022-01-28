@@ -45,7 +45,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Supermarket_Management_System.Properties.Resources.settings;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 31);
+            this.pictureBox1.Location = new System.Drawing.Point(170, 80);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(84, 85);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -54,7 +54,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(160, 289);
+            this.textBox1.Location = new System.Drawing.Point(304, 338);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(233, 20);
             this.textBox1.TabIndex = 46;
@@ -64,7 +64,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(28, 246);
+            this.label3.Location = new System.Drawing.Point(172, 295);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(325, 13);
             this.label3.TabIndex = 45;
@@ -75,7 +75,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(134, 82);
+            this.label2.Location = new System.Drawing.Point(278, 131);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(241, 13);
             this.label2.TabIndex = 44;
@@ -87,7 +87,7 @@
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(134, 37);
+            this.label1.Location = new System.Drawing.Point(278, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 20);
             this.label1.TabIndex = 43;
@@ -98,7 +98,7 @@
             this.update.BackColor = System.Drawing.Color.Black;
             this.update.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.update.ForeColor = System.Drawing.SystemColors.Control;
-            this.update.Location = new System.Drawing.Point(410, 277);
+            this.update.Location = new System.Drawing.Point(554, 326);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(153, 32);
             this.update.TabIndex = 42;
@@ -108,7 +108,7 @@
             // 
             // password
             // 
-            this.password.Location = new System.Drawing.Point(160, 186);
+            this.password.Location = new System.Drawing.Point(304, 235);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(233, 20);
             this.password.TabIndex = 41;
@@ -119,7 +119,7 @@
             this.ProfilePassword.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ProfilePassword.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProfilePassword.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ProfilePassword.Location = new System.Drawing.Point(28, 184);
+            this.ProfilePassword.Location = new System.Drawing.Point(172, 233);
             this.ProfilePassword.Name = "ProfilePassword";
             this.ProfilePassword.Size = new System.Drawing.Size(114, 20);
             this.ProfilePassword.TabIndex = 40;
@@ -127,7 +127,7 @@
             // 
             // name
             // 
-            this.name.Location = new System.Drawing.Point(160, 143);
+            this.name.Location = new System.Drawing.Point(304, 192);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(233, 20);
             this.name.TabIndex = 39;
@@ -138,7 +138,7 @@
             this.ProfileName.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ProfileName.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProfileName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ProfileName.Location = new System.Drawing.Point(28, 141);
+            this.ProfileName.Location = new System.Drawing.Point(172, 190);
             this.ProfileName.Name = "ProfileName";
             this.ProfileName.Size = new System.Drawing.Size(89, 20);
             this.ProfileName.TabIndex = 38;

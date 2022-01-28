@@ -106,7 +106,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(139, 69);
             this.button4.TabIndex = 24;
-            this.button4.Text = "Message And\r\nRequest For Vacation";
+            this.button4.Text = "Message / Request for Vacation";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 

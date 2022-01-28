@@ -12,5 +12,6 @@ namespace Supermarket_Management_System
       //  public int Id { get; set; }
         public string Name { get; set; }
        public string PricePerUnit { get; set; }
+    //    public string TotalCostOfStock { get; set; }
     }
 }
