@@ -26,29 +26,25 @@ namespace Supermarket_Management_System
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Stock"].ConnectionString);
-            connection.Open();
-            string sql = "SELECT * FROM Stock";
-            SqlCommand command = new SqlCommand(sql, connection);
-            SqlDataReader reader = command.ExecuteReader();
-            List<StocksProfit> list = new List<StocksProfit>();
-            while (reader.Read())
+            SqlConnection connection1 = new SqlConnection(ConfigurationManager.ConnectionStrings["StockPurchaseList"].ConnectionString);
+            connection1.Open();
+            string sql1 = "SELECT * FROM StockPurchaseList";
+            SqlCommand command1 = new SqlCommand(sql1, connection1);
+            SqlDataReader reader12 = command1.ExecuteReader();
+            List<PurchaseList> list1 = new List<PurchaseList>();
+            while (reader12.Read())
             {
-                StocksProfit stocks = new StocksProfit();
-               
-              
-                stocks.StockCategory = reader["StockCategory"].ToString();
-                stocks.ItemName = reader["ItemName"].ToString();
-              
-                stocks.PricePerUnit = reader["PricePerUnit"].ToString();
-               
-                stocks.SellingPrice = reader["SellingPrice"].ToString();
-               // stocks.ProfitPerUnit = reader["ProfitPerUnit"].ToString();
+                PurchaseList stocks1 = new PurchaseList();
 
+                stocks1.Name = reader12["Name"].ToString();
+                stocks1.Date = reader12["Date"].ToString();
+                stocks1.Quantity = reader12["Quantity"].ToString();
 
-                list.Add(stocks);
+                stocks1.TotalCostOfStock = reader12["TotalCostOfStock"].ToString();
+
+                list1.Add(stocks1);
             }
-            dataGridView1.DataSource = list;
+            dataGridView1.DataSource = list1;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -61,21 +57,12 @@ namespace Supermarket_Management_System
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            cat.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-           name.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-
-            price.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            sellingprice.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+           
         }
 
         private void button1_Click(object sender, EventArgs e)//calculation of profit
         {
-            double a, b, c1;
-            double.TryParse(price.Text, out a);
-            double.TryParse(sellingprice.Text, out b);
-            c1 = b - a;
-            if (c1 > 0)
-                profit.Text = c1.ToString("c").Remove(0, 1);
+            
           
 
 

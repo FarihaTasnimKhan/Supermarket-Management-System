@@ -82,7 +82,7 @@ namespace Supermarket_Management_System
 
         private void button3_Click(object sender, EventArgs e)//add item * quantity
         {
-           
+           //add item press korle stock minus hoye jabe auto and arekta new table e sales of the day with date store hobe
 
 
             double a, b, c1,d,f;
@@ -93,10 +93,30 @@ namespace Supermarket_Management_System
                 total.Text = c1.ToString("c").Remove(0,1);
             label11.Text = c1.ToString("c").Remove(0, 1);
 
-            
 
 
 
+
+
+
+
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("PAYMENT RECEIVED");
+            Sales_cashier_ s = new Sales_cashier_();
+            s.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("PAYMENT RECEIVED");
+            Sales_cashier_ s = new Sales_cashier_();
+            s.Show();
+            this.Hide();
         }
     }
 }

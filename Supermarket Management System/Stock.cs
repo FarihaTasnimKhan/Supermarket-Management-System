@@ -62,25 +62,6 @@ namespace Supermarket_Management_System
 
 
 
-            SqlConnection connection1 = new SqlConnection(ConfigurationManager.ConnectionStrings["StockPurchaseList"].ConnectionString);
-            connection1.Open();
-            string sql1 = "SELECT * FROM StockPurchaseList";
-            SqlCommand command1 = new SqlCommand(sql1, connection1);
-            SqlDataReader reader12 = command1.ExecuteReader();
-            List<PurchaseList> list1 = new List<PurchaseList>();
-            while (reader12.Read())
-            {
-                PurchaseList stocks1 = new PurchaseList();
-
-                stocks1.Name = reader12["Name"].ToString();
-                stocks1.Date = reader12["Date"].ToString();
-                stocks1.Quantity = reader12["Quantity"].ToString();
-
-                stocks1.TotalCostOfStock = reader12["TotalCostOfStock"].ToString();
-
-                list1.Add(stocks1);
-            }
-            dataGridView1.DataSource = list1;
         }
 
         private void set_Click(object sender, EventArgs e)// sets stock price
@@ -122,7 +103,7 @@ namespace Supermarket_Management_System
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Id = (int)dataGridView2.Rows[e.RowIndex].Cells[0].Value;
-            Item.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
+          //  Item.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
             SellingPrice.Text = dataGridView2.Rows[e.RowIndex].Cells[7].Value.ToString();
         }
 
@@ -145,8 +126,16 @@ namespace Supermarket_Management_System
         private void dataGridView2_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             Id = (int)dataGridView2.Rows[e.RowIndex].Cells[0].Value;
-            Item.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
+          //  Item.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
             SellingPrice.Text = dataGridView2.Rows[e.RowIndex].Cells[6].Value.ToString();
+
+
+
+            cat.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
+            name.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
+
+            price.Text = dataGridView2.Rows[e.RowIndex].Cells[5].Value.ToString();
+            label5.Text = dataGridView2.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
 
         private void set_Click_1(object sender, EventArgs e)
@@ -189,7 +178,7 @@ namespace Supermarket_Management_System
 
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Stock"].ConnectionString);
             connection.Open();
-            string sql = "UPDATE Stock SET StockRemainderFromAdmin='" + 1.ToString() + "'     WHERE ItemName='" + Item.Text + "' ";
+            string sql = "UPDATE Stock SET StockRemainderFromAdmin='" + 1.ToString() + "'     WHERE ItemName='" + name.Text + "' ";
             SqlCommand command = new SqlCommand(sql, connection);
             int result = command.ExecuteNonQuery();
             connection.Close();
@@ -215,6 +204,16 @@ namespace Supermarket_Management_System
             StockProfit s = new StockProfit();
             s.Show();
             this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            double a, b, c1;
+            double.TryParse(price.Text, out a);
+            double.TryParse(label5.Text, out b);
+            c1 = b - a;
+            if (c1 > 0)
+                profit.Text = c1.ToString("c").Remove(0, 1);
         }
     }
 }
